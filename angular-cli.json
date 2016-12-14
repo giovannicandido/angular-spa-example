@@ -18,9 +18,17 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/uikit/dist/css/uikit.min.css",
+        "../node_modules/uikit/dist/css/uikit.almost-flat.min.css",
+        "../node_modules/uikit/dist/css/components/notify.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/keycloak-js/dist/keycloak.min.js",
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/uikit/dist/js/uikit.min.js",
+        "../node_modules/uikit/dist/js/components/notify.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

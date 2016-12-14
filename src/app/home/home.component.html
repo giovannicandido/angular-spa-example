@@ -1,0 +1,24 @@
+<div class="uk-grid" data-uk-grid-margin="">
+  <div class="uk-width-1-1 uk-row-first">
+    <h1 class="uk-heading-large">Documentation</h1>
+    <p class="uk-text-large">Welcome to angular-http-interceptor and angular-spa examples</p>
+  </div>
+</div>
+
+<p>
+  This page is public, but the <a [routerLink]="['profile']">Profile</a> page needs a login. 
+  The login use <a href="http://keycloak.org">Keycloak</a>  server for its authentication in the port <b>8090</b>
+</p>
+
+<p>
+  The fastest way to get keycloak up and running is using docker. <br />
+  Run this command in terminal: <br />
+
+  <code>
+    docker run --name keycloak -p 9080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -d jboss/keycloak
+  </code>
+</p>
+
+<p>
+  You need to create a public client for this application. Check <i>app.module.ts</i> for the parameters
+</p>

@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+  <nav class="uk-navbar uk-margin-large-bottom">
+    <a [routerLink]="['']" [routerLinkActive]="['uk-active']" class="uk-navbar-brand uk-hidden-small">Home</a>
+    <ul class="uk-navbar-nav">
+      <li><a [routerLink]="['/profile']" [routerLinkActive]="['uk-active']">Profile</a></li>
+      <li><a [routerLink]="['/interceptor']" [routerLinkActive]="['uk-active']">Interceptors</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
