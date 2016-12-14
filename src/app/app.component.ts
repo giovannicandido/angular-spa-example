@@ -8,5 +8,11 @@ import { AuthService } from "angular-spa"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private auth: AuthService) {
 
+  }
+
+  logout() {
+    this.auth.logout()
+  }
 }

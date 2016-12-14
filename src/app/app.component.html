@@ -4,6 +4,7 @@
     <ul class="uk-navbar-nav">
       <li><a [routerLink]="['/profile']" [routerLinkActive]="['uk-active']">Profile</a></li>
       <li><a [routerLink]="['/interceptor']" [routerLinkActive]="['uk-active']">Interceptors</a></li>
+      <li><a (click)="logout()">Logout</a></li>
     </ul>
   </nav>
 

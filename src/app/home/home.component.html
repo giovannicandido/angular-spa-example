@@ -22,3 +22,6 @@
 <p>
   You need to create a public client for this application. Check <i>app.module.ts</i> for the parameters
 </p>
+
+<div class="uk-alert uk-alert-info" secIsNotAuthenticated>Go ahead, <a (click)="login()">login</a> and go back to this page</div>
+<div class="uk-alert uk-alert-success" secIsAuthenticated>Congratulations, you are loggedin</div>
