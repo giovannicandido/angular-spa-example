@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http"
-import { AuthService } from "angular-spa"
+import { AuthService, AppSecurityListener } from "angular-spa"
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { AuthService } from "angular-spa"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, private ajax: AppSecurityListener) {
 
   }
 

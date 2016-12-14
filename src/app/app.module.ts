@@ -10,7 +10,7 @@ import { MyInterceptor } from './interceptors'
 import { RouterModule } from "@angular/router"
 import { routes } from "./app.routes"
 
-import { AuthModule, AuthService } from "angular-spa/auth";
+import { AuthModule, AuthService, AppSecurityListener} from "angular-spa/auth";
 
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -39,13 +39,13 @@ import { InterceptorComponent } from './interceptor/interceptor.component'
       multi: true
     }, {
       provide: AuthService,
-      useValue: new AuthService(
-        {
+      useValue: new AuthService({
           url: "http://localhost:9080/auth",
           realm: "master",
-          clientId: "teste"
+          clientId: "teste",
+          onLoad: 'check-sso'
         })
-    }
+    }, 
   ],
   bootstrap: [AppComponent]
 })
