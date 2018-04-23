@@ -11,4 +11,4 @@ export const appRoutes: Routes = [
     { path: 'interceptor', component: InterceptorComponent }
 ]
 
-export const routes = RouterModule.forRoot(appRoutes, {enableTracing: true})
+export const routes = RouterModule.forRoot(appRoutes)
