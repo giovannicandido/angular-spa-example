@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule, Request, Response } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { HttpModule, Request, Response } from '@angular/http'
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'
 import { InterceptorModule, Interceptor } from 'angular-http-interceptor'
 import { MyInterceptor } from './interceptors'
 
-import { RouterModule } from "@angular/router"
-import { routes } from "./app.routes"
+import { RouterModule } from '@angular/router'
+import { routes } from './app.routes'
 
-import { AuthModule, AuthService, AppSecurityListener} from "angular-spa/auth";
+import { AuthModule, AuthService, AppSecurityListener} from 'angular-spa/auth'
 
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component'
+import { ProfileComponent } from './profile/profile.component'
 import { InterceptorComponent } from './interceptor/interceptor.component'
 
 @NgModule({
@@ -27,7 +27,6 @@ import { InterceptorComponent } from './interceptor/interceptor.component'
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule,
     routes,
     InterceptorModule,
     AuthModule
@@ -40,12 +39,12 @@ import { InterceptorComponent } from './interceptor/interceptor.component'
     }, {
       provide: AuthService,
       useValue: new AuthService({
-          url: "http://localhost:9080/auth",
-          realm: "master",
-          clientId: "teste",
+          url: 'http://localhost:9080/auth',
+          realm: 'master',
+          clientId: 'angular-spa-example',
           onLoad: 'check-sso'
         })
-    }, 
+    }
   ],
   bootstrap: [AppComponent]
 })

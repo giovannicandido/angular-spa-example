@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Http } from "@angular/http"
-import { AuthService, AppSecurityListener } from "angular-spa"
+import { Component } from '@angular/core'
+import { Http } from '@angular/http'
+import { AuthService, AppSecurityListener } from 'angular-spa'
 
 @Component({
   selector: 'app-root',

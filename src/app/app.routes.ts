@@ -1,9 +1,9 @@
-import { Routes, RouterModule } from "@angular/router"
+import { Routes, RouterModule } from '@angular/router'
 
-import { HomeComponent } from "./home/home.component"
-import { ProfileComponent } from "./profile/profile.component"
-import { InterceptorComponent } from "./interceptor/interceptor.component"
-import { LoginGuard } from "angular-spa/auth"
+import { HomeComponent } from './home/home.component'
+import { ProfileComponent } from './profile/profile.component'
+import { InterceptorComponent } from './interceptor/interceptor.component'
+import { LoginGuard } from 'angular-spa/auth'
 
 export const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -11,4 +11,4 @@ export const appRoutes: Routes = [
     { path: 'interceptor', component: InterceptorComponent }
 ]
 
-export const routes = RouterModule.forRoot(appRoutes)
+export const routes = RouterModule.forRoot(appRoutes, {enableTracing: true})
